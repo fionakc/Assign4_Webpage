@@ -42,3 +42,12 @@ h1 {
 	font-size: 30pt;
 	font-family: sans-serif;
 }
+
+/*id tag, not class, so need # */
+#largeImage{
+	border: 5px solid black;
+	
+	padding:20px;
+	margin:20px;
+	
+}
