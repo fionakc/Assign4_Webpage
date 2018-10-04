@@ -6,14 +6,9 @@
 		$arTemp = file_get_contents("images.txt");
 		
 		$array = explode("\n", $arTemp,3);
-		
+		$indexNum=1;
 	?>  
 	
-	<!-- <?php 
-	$array[0]="cat1.jpg";
-	$array[1]="cat2.jpg";
-	$array[2]="cat4.jpg";
-	?> -->
 	
 <!DOCTYPE html>
 <html>
@@ -51,7 +46,8 @@
 	
 	<!-- resized image but still too big??  -->
 	<div class="bigImageLocate">
-		<div class="bigImage"> </div>
+		 <div class="bigImage"> </div> 
+		<!--<img src= <?php echo $array[$indexNum] ?> class="bigImage" > -->
 	</div>
 	
 	<!-- trying to access array, and create an article for each element, of class smallImage -->
@@ -65,7 +61,7 @@
 	</section>
 	
 	
-	
+	<?php echo $imageLink ?>
 
 	<script type="text/javascript" src="main.js"></script>
 	</body>
