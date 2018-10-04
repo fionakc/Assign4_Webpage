@@ -5,8 +5,11 @@
 
 		$arTemp = file_get_contents("images.txt");
 		
-		$array = explode("\n", $arTemp,3);
-		$indexNum=1;
+		$array = explode("\n", $arTemp,3); <!-- not sure if need to limit this size -->
+		
+		$indexNumTemp=file_get_contents("bigImageIndexNum.txt");
+		$bigImageUrl = $array[$indexNumTemp];
+		
 	?>  
 	
 	
@@ -46,7 +49,10 @@
 	
 	<!-- resized image but still too big??  -->
 	<div class="bigImageLocate">
-		 <div class="bigImage"> </div> 
+	
+			<img src= <?php echo $bigImageUrl ?> class="bigImage"  >
+			
+		<!-- <div class="bigImage"> </div> this was the original line-->
 		<!--<img src= <?php echo $array[$indexNum] ?> class="bigImage" > -->
 	</div>
 	
