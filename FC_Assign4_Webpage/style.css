@@ -80,10 +80,12 @@ background:white;
 
 .imageGallery{
 	display.flex;
-
+	flex-wrap:wrap;
 }
 
 .smallImage{
 	background: no-repeat;
+	max-width:25%;
+	max-height:80px;
 }
 

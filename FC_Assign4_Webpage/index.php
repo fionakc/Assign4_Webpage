@@ -58,17 +58,13 @@
 	
 	<section class="imageGallery">
 		<?php for($i=0;$i<count($array);$i++){ 
-			echo $array[$i]; ?>
+			 ?>
 			 
-			 <img src=$array[$i] class="smallImage"  > 
+			 <img src= <?php echo $array[$i]?> class="smallImage"  >  <!-- jump to php here because the array only exists inside php mode  -->
 		<?php  }  ?>
 	</section>
 	
-	<?php
-	for ($i=0; $i<count($array); $i++) {
-			 echo $array[$i];
-			}
-			?>
+	
 	
 
 	<script type="text/javascript" src="main.js"></script>
