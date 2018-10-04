@@ -43,6 +43,11 @@ h1 {
 	font-family: sans-serif;
 }
 
+p{
+
+background:white;
+}
+
 /*id tag, not class, so need # */
 #largeImage{
 	border: 5px solid black;
@@ -51,3 +56,25 @@ h1 {
 	margin:20px;
 	
 }
+
+.bigImageLocate{  /* container for the big image */
+	background:white;
+	border: 5px solid blue;
+	height:300px;
+	display:flex;
+	align-items:center; /* cross axis - horizontal*/
+	justify-content:center; /* main axis - vertical*/
+	max-width: 300px;
+    margin: auto;
+
+}
+
+.bigImage{  /* the actual big image  */
+	background:no-repeat url(cat1.jpg);
+	background-size:contain;
+	background-repeat:no-repeat;
+	width:300px;
+	height:300px;
+
+}
+
