@@ -6,7 +6,7 @@
 *borders for float box
 *style for descriptive text
 *background for text for legibility
-*
+*need another flexbox to hold the smaller images, that will be clicked on
 *
 */
 
@@ -76,5 +76,14 @@ background:white;
 	width:300px;
 	height:300px;
 
+}
+
+.imageGallery{
+	display.flex;
+
+}
+
+.smallImage{
+	background: no-repeat;
 }
 
