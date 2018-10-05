@@ -2,16 +2,13 @@
 
    
 <?php
-
-
-
-
 		$arTemp = file_get_contents("images.txt");
 		
 		$array = explode("\n", $arTemp,3); // not sure if need to limit this size 
 		
 		$indexNum=file_get_contents("bigImageIndexNum.txt");
 		$bigImageUrl = $array[$indexNum];
+		#$bigImageUrl = $array[$GET["index"]];  //not works
 		
 	?>  
 	
@@ -28,11 +25,12 @@
 	</head>
 	<body>
 	<!-- look at what's in the array -->
+	
 	<?php
 	for ($i=0; $i<count($array); $i++) {
-			 echo $array[$i];
-			}
-			?>
+		 echo $array[$i];
+		}
+		?>
 	
 	
 	<!--prob remove this later -->	
@@ -53,24 +51,33 @@
 	<!-- resized image but still too big??  -->
 	<div class="bigImageLocate">
 	
-	<!--
-	//href="javascript:__doPostBack('indexNum','')";  //???
-	//<a id="LinkButton1" href="javascript:__doPostBack('LinkButton1','')">LinkButton</a>
+ <!--
+    <script language="javascript">
+	function enablePostBack()
+	{
+        //T1 is the first argument(name of our control) I mentioned earlier and give the
+       // value of second argument as "" that's all
+       __doPostBack("indexNum","");
+	}
+	</script>
 	-->
+ 
+<!--  <?php echo $_GET['index']; ?> -->
+  <?php echo $indexNum; ?> 
+ 
 			<?php  
-			$href= javascript:__doPostBack('indexNum','');   //this line not giving back indexNum value
-			//echo $href;
-			$bigImageUrl = $array[$href]; 
+			#$bigImageUrl=$array[$_GET['index']];
+			$bigImageUrl =  $array[$indexNum]; 
 			?>  //undefined index error
 	
 			<img src= <?php echo $bigImageUrl ?> class="bigImage"  >
 			
 		<!-- <div class="bigImage"> </div> this was the original line-->
-		<!--<img src= <?php echo $array[$indexNum] ?> class="bigImage" > -->
+		
 	</div>
 	
 	<!-- trying to access array, and create an article for each element, of class smallImage -->
-	<?php echo $href; ?>
+	
 	<section class="imageGallery">
 		<?php for($i=0;$i<count($array);$i++){ 
 			 ?>
@@ -80,7 +87,7 @@
 	</section>
 	
 	
-	<?php echo $imageLink ?>
+	
 
 	<script type="text/javascript" src="main.js"></script>
 	</body>
