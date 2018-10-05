@@ -11,6 +11,8 @@
 */
 
 
+
+
 body{   
 	/*background:blue; */
 	/*color:white;*/
@@ -70,11 +72,11 @@ background:white;
 }
 
 .bigImage{  /* the actual big image  */
-	background:no-repeat url(cat1.jpg);
+	/*background:no-repeat url(cat1.jpg);*/
 	background-size:contain;
 	background-repeat:no-repeat;
-	width:300px;
-	height:300px;
+	max-width:300px;
+	max-height:300px;
 
 }
 

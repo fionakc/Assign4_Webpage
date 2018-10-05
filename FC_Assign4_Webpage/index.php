@@ -3,12 +3,15 @@
    
 <?php
 
+
+
+
 		$arTemp = file_get_contents("images.txt");
 		
-		$array = explode("\n", $arTemp,3); <!-- not sure if need to limit this size -->
+		$array = explode("\n", $arTemp,3); // not sure if need to limit this size 
 		
-		$indexNumTemp=file_get_contents("bigImageIndexNum.txt");
-		$bigImageUrl = $array[$indexNumTemp];
+		$indexNum=file_get_contents("bigImageIndexNum.txt");
+		$bigImageUrl = $array[$indexNum];
 		
 	?>  
 	
@@ -50,6 +53,16 @@
 	<!-- resized image but still too big??  -->
 	<div class="bigImageLocate">
 	
+	<!--
+	//href="javascript:__doPostBack('indexNum','')";  //???
+	//<a id="LinkButton1" href="javascript:__doPostBack('LinkButton1','')">LinkButton</a>
+	-->
+			<?php  
+			$href= javascript:__doPostBack('indexNum','');   //this line not giving back indexNum value
+			//echo $href;
+			$bigImageUrl = $array[$href]; 
+			?>  //undefined index error
+	
 			<img src= <?php echo $bigImageUrl ?> class="bigImage"  >
 			
 		<!-- <div class="bigImage"> </div> this was the original line-->
@@ -57,7 +70,7 @@
 	</div>
 	
 	<!-- trying to access array, and create an article for each element, of class smallImage -->
-	
+	<?php echo $href; ?>
 	<section class="imageGallery">
 		<?php for($i=0;$i<count($array);$i++){ 
 			 ?>
