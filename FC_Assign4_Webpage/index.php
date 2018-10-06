@@ -7,7 +7,7 @@
 		$array = explode("\n", $arTemp,3); // not sure if need to limit this size 
 		
 		$indexNum=file_get_contents("bigImageIndexNum.txt");
-		$bigImageUrl = $array[$indexNum];
+		#$bigImageUrl = $array[$indexNum];
 		#$bigImageUrl = $array[$GET["index"]];  //not works
 		
 	?>  
@@ -50,27 +50,14 @@
 	
 	<!-- resized image but still too big??  -->
 	<div class="bigImageLocate">
-	
- <!--
-    <script language="javascript">
-	function enablePostBack()
-	{
-        //T1 is the first argument(name of our control) I mentioned earlier and give the
-       // value of second argument as "" that's all
-       __doPostBack("indexNum","");
-	}
-	</script>
-	-->
- 
-<!--  <?php echo $_GET['index']; ?> -->
-  <?php echo $indexNum; ?> 
- 
+
 			<?php  
-			#$bigImageUrl=$array[$_GET['index']];
+			
 			$bigImageUrl =  $array[$indexNum]; 
-			?>  //undefined index error
-	
-			<img src= <?php echo $bigImageUrl ?> class="bigImage"  >
+			?>  
+			
+		<img id="bigImage" >
+		<!--	<img src= <?php echo $bigImageUrl ?> class="bigImage"  >  -->
 			
 		<!-- <div class="bigImage"> </div> this was the original line-->
 		
@@ -82,14 +69,14 @@
 		<?php for($i=0;$i<count($array);$i++){ 
 			 ?>
 			 
-			 <img src= <?php echo $array[$i]?> class="smallImage"  >  <!-- jump to php here because the array only exists inside php mode  -->
+			 <img src= <?php echo $array[$i]?> class="smallImage"  onclick="expandImage(this);">  <!-- jump to php here because the array only exists inside php mode  -->
 		<?php  }  ?>
 	</section>
 	
 	
-	
-
 	<script type="text/javascript" src="main.js"></script>
+
+	
 	</body>
 	
 </html>

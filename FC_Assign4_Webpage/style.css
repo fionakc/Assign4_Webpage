@@ -71,7 +71,7 @@ background:white;
 
 }
 
-.bigImage{  /* the actual big image  */
+#bigImage{  /* the actual big image  */
 	/*background:no-repeat url(cat1.jpg);*/
 	background-size:contain;
 	background-repeat:no-repeat;
