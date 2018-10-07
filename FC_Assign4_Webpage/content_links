@@ -1,23 +1,25 @@
+SWEN502 - Webpages Assignment
+Fiona Crook
+300442873
+
+
+The links for the images used:
 cat1 https://pxhere.com/en/photo/593478
 cat2 https://pxhere.com/en/photo/591867
-cat3 https://www.flickr.com/photos/tambako/11174630606
 cat4 https://www.maxpixel.net/Cat-Portrait-Domestic-Pet-Kitten-Mammal-Animal-1986499
-cat5 https://www.flickr.com/photos/richpix/43604096
 cat6 http://www.publicdomainfiles.com/show_file.php?id=13937581228077
+cat7 https://en.wikipedia.org/wiki/Savannah_cat#/media/File:Savannah_Cat_closeup.jpg
+cat8 https://commons.wikimedia.org/wiki/File:House_Cat_(16301729572).jpg
+cat9 https://pixabay.com/en/house-cat-cat-pet-pet-cat-281511/
+cat10 https://pxhere.com/en/photo/820914
+cat11 https://commons.wikimedia.org/wiki/File:House_cat,_white,_grey,_detail.jpg
+cat12 https://www.maxpixel.net/Cute-Pet-Pets-Cat-Kitten-Housecat-Animal-Animals-2651752
+cat13 https://www.pexels.com/photo/cat-ginger-house-cat-orange-362519/
+cat14 https://pixnio.com/fauna-animals/cats-and-kittens/animal-yellow-cat-fence-backyard-kitten
+cat15 https://en.wikipedia.org/wiki/American_Shorthair#/media/File:14_years_old_american_shorthair.jpg
+cat16 https://pxhere.com/en/photo/1037694
+cat17 https://www.geograph.org.uk/photo/4065450
 
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/opacity
-remember later for image selection
-
-<!-- html comments -->
-
-//php comments
-#also php comments
-
-/*css comments
-*/
-
-//js comments
-
-file writer from
-https://forum.unity.com/threads/can-i-read-and-write-text-files-using-javascript.5084/
+Images.txt is where the urls for the thumbnail images are kept.
+bigImageIndexNum.txt decides what the first image that will be preloaded onto the page will be,
+by holding a single number representing an array index.

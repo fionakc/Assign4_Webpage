@@ -1,13 +1,7 @@
 /*
-*background - tile image
-*style for header
-*style for info text
-*borders for picture
-*borders for float box
-*style for descriptive text
-*background for text for legibility
-*need another flexbox to hold the smaller images, that will be clicked on
-*
+*SWEN502 - Webpages Assignment
+*Fiona Crook
+*300442873
 */
 
 
@@ -22,7 +16,7 @@ body{
 }
 
 
-	
+/* Main heading */
 h1 {
 	color:fuchsia;
 	background:white;
@@ -33,6 +27,7 @@ h1 {
 	animation: 2s infinite flashing-border;
 }
 
+/* Main heading border to flash */
 @keyframes flashing-border{
 	0%{
 		border-color:fuchsia;		
@@ -45,6 +40,7 @@ h1 {
 	}
 }
 
+/* Secondary text */
 .text{
 	font-family: "Comic Sans MS",sans-serif;
 	color: green;
@@ -53,20 +49,21 @@ h1 {
 	text-align:center;
 }
 
-
-.bigImageLocate{  /* container for the big image */
+/* Container for the big image */
+.bigImageLocate{  
 	background:white;
 	border: 5px solid black;	
 	display:flex;
 	align-items:center; /* cross axis - horizontal*/
 	justify-content:center; /* main axis - vertical*/
-	max-width: 500px;
-	max-height:500px;
+	width: 500px;
+	height:500px;
     margin: auto;
 
 }
 
-#bigImage{  /* the actual big image  */
+/* the actual big image  */
+#bigImage{  
 	background-size:contain;
 	background-repeat:no-repeat;
 	max-width:500px;
@@ -74,15 +71,17 @@ h1 {
 
 }
 
+/* Flex box for the image gallery */
 .imageGallery{
 	display.flex;
 	flex-wrap:wrap;
 }
 
+/* Styling for the small images */
 .smallImage{
 	background: no-repeat;
 	max-width:25%;
-	max-height:80px;
+	max-height:100px;
 }
 
 
